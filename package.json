@@ -16,7 +16,7 @@
     "url": "https://github.com/DmitrySHilovsky/JS-Lerning/issues"
   },
   "homepage": "https://github.com/DmitrySHilovsky/JS-Lerning#readme",
-  "dependencies": {
+  "devDependencies": {
     "typescript": "^4.9.4"
   }
 }
