@@ -40,9 +40,23 @@
 // const text = 'When \t\n you play a \t\n game of thrones you win or you die.';
 // console.log(text.trim().slice(5,15));
 
-const motto = (ass:string) => {
-    let mmmm:String;
-    mmmm = "10";
-    console.log(mmmm+ass);
-}
-motto("17");
+// const motto = (ass:string) => {
+//     let mmmm:String;
+//     mmmm = "10";
+//     console.log(mmmm+ass);
+// }
+// motto("17");
+
+// ПРоверка на висосный год
+
+const isLeapYear =(year: number) => {
+    const result = ((year % 400) === 0) || ((year % 4 === 0) && (year % 100 > 0));
+    console.log(result);
+    return result; 
+  }
+  // END
+  
+isLeapYear(2018); // false
+isLeapYear(2017); // false
+isLeapYear(2016); // true
+  
