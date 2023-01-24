@@ -68,9 +68,8 @@
 // то строка возвращается без изменений. Если на вход передана пустая строка, 
 // функция должна вернуть пустую строку.
 
-import reverse from './reverse';
 
-const convertText = (text) =>{
+const convertText = (text:string) =>{
     if (text === ""){
       console.log('текст пустой');
       return "";
@@ -82,7 +81,7 @@ const convertText = (text) =>{
     } 
     else {
       console.log("Пeрвая маленькая "+text);
-      return reverse(text);
+      return text.toUpperCase;
   
     }
     
