@@ -49,14 +49,47 @@
 
 // ПРоверка на висосный год
 
-const isLeapYear =(year: number) => {
-    const result = ((year % 400) === 0) || ((year % 4 === 0) && (year % 100 > 0));
-    console.log(result);
-    return result; 
-  }
-  // END
+// const isLeapYear =(year: number) => {
+//     const result = ((year % 400) === 0) || ((year % 4 === 0) && (year % 100 > 0));
+//     console.log(result);
+//     return result; 
+//   }
+//   // END
   
-isLeapYear(2018); // false
-isLeapYear(2017); // false
-isLeapYear(2016); // true
+// isLeapYear(2018); // false
+// isLeapYear(2017); // false
+// isLeapYear(2016); // true
+
+// вывод быквы по номеру
+
+// BEGIN (write your solution here) - Реализуйте функцию convertText(), 
+// которая принимает на вход строку и, если первая буква не заглавная, 
+// возвращает перевернутый вариант исходной строки. Если первая буква заглавная, 
+// то строка возвращается без изменений. Если на вход передана пустая строка, 
+// функция должна вернуть пустую строку.
+
+import reverse from './reverse';
+
+const convertText = (text) =>{
+    if (text === ""){
+      console.log('текст пустой');
+      return "";
+    }  
+    
+    else if (text[0] === text[0].toUpperCase()) {
+      console.log("Пeрвая большая "+text);
+      return text; 
+    } 
+    else {
+      console.log("Пeрвая маленькая "+text);
+      return reverse(text);
+  
+    }
+    
+  }
+
+convertText('Hello'); // 'Hello'
+convertText('hello'); // 'olleh' 1
+
+  // END
   
