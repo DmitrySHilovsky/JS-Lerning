@@ -69,26 +69,75 @@
 // функция должна вернуть пустую строку.
 
 
-const convertText = (text:string) =>{
-    if (text === ""){
-      console.log('текст пустой');
-      return "";
-    }  
+// // const convertText = (text:string) =>{
+// //     if (text === ""){
+// //       console.log('текст пустой');
+// //       return "";
+// //     }  
     
-    else if (text[0] === text[0].toUpperCase()) {
-      console.log("Пeрвая большая "+text);
-      return text; 
-    } 
-    else {
-      console.log("Пeрвая маленькая "+text);
-      return text.toUpperCase;
+// //     else if (text[0] === text[0].toUpperCase()) {
+// //       console.log("Пeрвая большая "+text);
+// //       return text; 
+// //     } 
+// //     else {
+// //       console.log("Пeрвая маленькая "+text);
+// //       return text.toUpperCase;
   
-    }
+// //     }
     
-  }
+// //   }
 
-convertText('Hello'); // 'Hello'
-convertText('hello'); // 'olleh' 1
+// // convertText('Hello'); // 'Hello'
+// // convertText('hello'); // 'olleh' 1
+
+// //   // END
+
+
+// // Реализуйте функцию joinNumbersFromRange(), которая объединяет все числа из диапазона в строку и возвращает её:
+// const joinNumbersFromRange = (start,finish) => {
+//     let i = start;
+//     let result = "";
+//     while (i <= finish) {
+//       result = result + i;
+//       i = i + 1;
+//     }
+//   return result;
+//   }
+//   // END
+  
+
+  /* eslint-disable no-plusplus */
+
+// BEGIN (write your solution here)
+// Напишите функцию makeItFunny(), которая принимает на вход строку и возвращает её копию, 
+// у которой каждый n-ный элемент переведен в верхний регистр. n – задается на входе в функцию.
+console.log("Запуск");
+
+const makeItFunny = (text:string,n:number) => {
+    let i = 1;
+    let result = "";
+    while (i <= text.length){
+      
+      if ((i % n) === 0 && (i>0)){
+        // записать болшую букву
+        result = result + text[i-1].toUpperCase();
+        console.log("Проверка что I: " + i + " кратно N: " + n + " КРАТНО " + result);
+        
+      }
+      else {
+        //записать маленькую букву
+        result = result + text[i-1];
+        console.log("Проверка что I: " + i + " кратно N: " + n + " НЕ КРАТНО " + result);
+        
+      }
+  
+    
+    i = i+1;
+    }
+    return result;
+  }
+const text = 'I never look back';
+// Каждый третий элемент
+console.log(makeItFunny(text, 3)); // 'I NevEr LooK bAck'
 
   // END
-  
