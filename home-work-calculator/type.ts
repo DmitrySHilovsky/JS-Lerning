@@ -1,0 +1,3 @@
+type TypeOperation = "+" | "-" | "/" | "*";
+
+export { TypeOperation };
