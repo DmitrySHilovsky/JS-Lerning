@@ -1,6 +1,6 @@
 // Замыкание функции
-const afun = () => {
-    let s = 1;    
+const afun:Tfunc = ():Tfunc => {
+    let s:number = 1;    
     return () => {
         return s++
     }
@@ -8,4 +8,6 @@ const afun = () => {
 // nameUser - Camel case
 // NameUser - Pascal case
 // name-user - Kebab case
+
+type Tfunc = () => {}
 
